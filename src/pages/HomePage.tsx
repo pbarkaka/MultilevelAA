@@ -1,9 +1,11 @@
 import React from 'react';
-
 import { Avatar, Text, Button, Chip, ToggleTip } from '@momentum-design/components/react';
+import { useNavigate } from 'react-router-dom';
 import './homepage.css';
 
 const HomePage: React.FC = () => {
+    const navigate = useNavigate();
+
     return (
         <div className="home-page-wrapper">
             <div className="home-page-header">
@@ -24,6 +26,16 @@ const HomePage: React.FC = () => {
                         <Text type="body-midsize-medium" tagname='span'>Description</Text>
                     </div>
                 </div>
+            </div>
+            
+            <div className="home-page-content">
+                <Button 
+                    variant="primary" 
+                    size={40} 
+                    onClick={() => navigate('/submenu')}
+                >
+                    Open Submenu Modal
+                </Button>
             </div>
         </div>
     );
