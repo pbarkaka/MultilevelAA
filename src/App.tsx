@@ -9,7 +9,7 @@ import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark')
+  const [theme, setTheme] = useState<'dark' | 'light'>('light')
   return (
     <BrowserRouter>
       <ThemeProvider themeclass={`mds-theme-stable-${theme}Webex`}>
