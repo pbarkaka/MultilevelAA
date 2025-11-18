@@ -10,7 +10,6 @@ const HomePage: React.FC = () => {
                 <div className="home-page-left-section">
                     <Avatar size={64} iconName='placeholder-regular'></Avatar>
                 </div>
-                <div>asdadada</div>
                 <div className="home-page-middle-section">
                     <div className="home-page-middle-section-first-line">
                         <Text type="heading-midsize-bold" tagname='span'>Page title</Text>
