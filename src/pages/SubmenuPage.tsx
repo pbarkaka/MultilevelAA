@@ -7,7 +7,7 @@ interface SubmenuPageProps {
   setTheme: React.Dispatch<React.SetStateAction<'dark' | 'light'>>;
 }
 
-const SubmenuPage: React.FC<SubmenuPageProps> = ({ theme, setTheme }) => {
+const SubmenuPage: React.FC<SubmenuPageProps> = ({ theme }) => {
   const navigate = useNavigate();
 
   return (
