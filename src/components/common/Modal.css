@@ -1,0 +1,122 @@
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Modal Container */
+.modal-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh;
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-small {
+    width: 400px;
+    max-width: 90vw;
+}
+
+.modal-medium {
+    width: 800px;
+    max-width: 90vw;
+}
+
+.modal-large {
+    width: 1200px;
+    max-width: 95vw;
+}
+
+/* Modal Header */
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    background-color: #0d74d1;
+    color: #ffffff;
+    border-radius: 8px 8px 0 0;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    transition: opacity 0.2s;
+}
+
+.modal-close:hover {
+    opacity: 0.8;
+}
+
+.modal-close mds-icon {
+    font-size: 20px;
+}
+
+/* Modal Content */
+.modal-content {
+    padding: 24px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: #c4c4c4;
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: #a0a0a0;
+}
+

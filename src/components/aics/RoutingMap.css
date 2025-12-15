@@ -1,0 +1,25 @@
+.routing-map {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.routing-map svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.routing-node {
+    transition: transform 0.2s;
+}
+
+.routing-node:hover {
+    transform: scale(1.1);
+}
+
+.routing-node:hover circle {
+    filter: brightness(1.1);
+}
+

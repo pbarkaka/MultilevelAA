@@ -1,0 +1,118 @@
+.aics-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f7f9fa;
+    overflow: hidden;
+}
+
+.aics-main-content {
+    display: flex;
+    flex: 1;
+    gap: 0;
+    overflow: hidden;
+}
+
+.aics-content-area {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #181818;
+    margin: 0;
+    padding: 24px 24px 16px 24px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.aics-panels-container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.aics-left-panel {
+    width: 380px;
+    background-color: #f7f9fa;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-right: 1px solid #e4e4e4;
+}
+
+.aics-right-panel {
+    flex: 1;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    background-color: #ffffff;
+    overflow: hidden;
+    font-size: 16px;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .aics-main-content {
+        grid-template-columns: 55% 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .aics-page {
+        grid-template-rows: 64px 1fr 100px;
+    }
+    
+    .aics-main-content {
+        grid-template-columns: 1fr;
+        position: relative;
+    }
+    
+    .aics-right-panel {
+        position: absolute;
+        top: 0;
+        right: -100%;
+        width: 90%;
+        height: 100%;
+        background-color: #ffffff;
+        box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        z-index: 100;
+    }
+    
+    .aics-right-panel.mobile-visible {
+        right: 0;
+    }
+}
+
+/* Ensure all text uses consistent fonts */
+.aics-page * {
+    font-family: 'CiscoSansTT', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+}
+
+/* Scrollbar styling for consistency */
+.aics-page ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.aics-page ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.aics-page ::-webkit-scrollbar-thumb {
+    background: #c4c4c4;
+    border-radius: 4px;
+}
+
+.aics-page ::-webkit-scrollbar-thumb:hover {
+    background: #a0a0a0;
+}
+
+.conversational-panel{
+    padding-top: 24px;
+}

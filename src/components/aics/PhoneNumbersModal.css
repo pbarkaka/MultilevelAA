@@ -1,0 +1,241 @@
+/* Modal Content */
+.phone-numbers-modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    min-height: 400px;
+}
+
+.phone-numbers-header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.phone-numbers-subtitle {
+    color: var(--mds-color-theme-text-secondary);
+    line-height: 1.6;
+}
+
+/* Activate Later Toggle */
+.activate-later-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    background-color: transparent;
+}
+
+.activate-later-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.activate-later-label .info-icon{
+    font-size: 1px;
+}
+
+.info-icon {
+    color: var(--mds-color-theme-text-secondary);
+}
+
+/* Custom Toggle Switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 32px;
+    height: 16px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.3s;
+    border-radius: 16px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+    background-color: var(--mds-color-theme-common-blue-50);
+}
+
+.toggle-switch input:checked + .toggle-slider:before {
+    transform: translateX(16px);
+}
+
+/* Input Section */
+.phone-numbers-input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.phone-numbers-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    outline: 1px solid #929292;
+    min-height: 40px;
+    cursor: text;
+}
+
+.phone-numbers-tags-container:focus-within {
+    outline: none;
+    border-color: var(--mds-color-theme-common-blue-50);
+    box-shadow: 0 0 0 2px rgba(13, 116, 209, 0.1);
+}
+
+.phone-number-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: 20px;
+    background-color: #d6d6d6;
+    padding: 4px 8px;
+    /* background-color: var(--mds-color-theme-background-secondary); */
+    border: 1px solid var(--mds-color-theme-outline-secondary);
+    border-radius: 4px;
+    font-size: 13px;
+    color: var(--mds-color-theme-text-primary);
+    max-width: 200px;
+}
+
+.tag-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tag-remove {
+    display: flex;
+    width:16px;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: var(--mds-color-theme-text-secondary);
+    transition: color 0.2s ease-in-out;
+}
+
+.tag-remove:hover {
+    color: var(--mds-color-theme-text-primary);
+}
+
+.tag-remove .md-icon {
+    color: inherit;
+}
+
+.phone-numbers-input {
+    flex: 1;
+    min-width: 200px;
+    border: none;
+    outline: none;
+    font-family: 'CiscoSans', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--mds-color-theme-text-primary);
+    padding: 4px 0;
+}
+
+.phone-numbers-input::placeholder {
+    color: var(--mds-color-theme-text-tertiary);
+}
+
+.phone-numbers-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    font-family: 'CiscoSans', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--mds-color-theme-text-primary);
+    background-color: #ffffff;
+    resize: vertical;
+    height: 30px;
+    outline: 1px solid #929292;
+}
+
+.phone-numbers-textarea::placeholder {
+    color: var(--mds-color-theme-text-tertiary);
+}
+
+.phone-numbers-textarea:focus {
+    outline: none;
+    border-color: var(--mds-color-theme-common-blue-50);
+    box-shadow: 0 0 0 2px rgba(13, 116, 209, 0.1);
+}
+
+.phone-numbers-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+
+.phone-counter {
+    color: var(--mds-color-theme-text-secondary);
+}
+
+.clear-all-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--mds-color-theme-text-primary);
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+    font-size: 14px;
+    font-family: 'CiscoSans', sans-serif;
+}
+
+.clear-all-button:hover {
+    background-color: var(--mds-color-theme-background-hover);
+}
+
+.clear-all-button .md-icon {
+    color: inherit;
+}
+
+/* Modal Footer */
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 16px 24px;
+    border-top: 1px solid var(--mds-color-theme-outline-secondary);
+    background-color: #ffffff;
+}
